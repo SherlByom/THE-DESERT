@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE DESERT</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto',sans-serif;
+        }
+        .menubar {
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .bar1, .bar2, .bar3 {
+            width: 25px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 6px 0;
+            margin-left: 100px;
+            transition: 0.4s;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://blogger.googleusercontent.com/img/a/AVvXsEhJ5T09LoqIzFz2-TptGqbzdyOTiqwRprgjERNdvIZmGEe9cdcMq1TEYNKkpriirc_vBRkMptwoNHs_n11JUnqNoAcRTeLMZquyibJ_56UjcjiaGPdyzRJ2X_xhOQvS9IXAPfi-fCC4S1fWPwVZ-2sqZa90y6E69Llwz02uHbM-x_qNBvYV3iyMfK-zPFQB=s1600-rw");
+            background-position: center;
+            background-size: cover;
+            padding-left: 8%;
+            padding-right: 8%;
+            box-sizing: border-box;
+        }
+        .navbar{
+            height: 12%;
+            display: flex;
+            align-items: center;
+        }
+        .logo{
+            width: 50px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .logo:hover{
+            box-shadow: 0 0 25px rgb(248, 9, 9);
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-left: 60px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 13px;
+            transition: 0.2s linear;
+        }
+        nav ul li a:hover{
+            text-shadow: 0px 2px rgb(255, 0, 0);
+            text-decoration: underline white 3px;
+            background-color: transparent;
+            transition: 0.2s linear;
+            
+        }
+        .row{
+            display: flex;
+            height: 88%;
+            align-items: center;
+        }
+        .col{
+            flex-basis: 50%;
+        }
+        h1{
+            color: white;
+            width: 310px;
+            font-size: 100px;
+            transition: 0.5s;
+        }
+        h1:hover{
+            text-shadow: 7px 7px yellow;
+            transition: 0.2s ;
+        }
+        p{
+            color: white;
+            font-size: 11px;
+            line-height: 15px;
+        }
+        button{
+            width: 180px;
+            color: black;
+            font-size: 12px;
+            padding: 10px 0;
+            background-color: white;
+            border: 2px solid red;
+            border-radius: 20px;
+            outline: none;
+            margin-top: 30px;
+            transition: 0.2s;
+        }
+        .explore:hover{
+            background-color: transparent;
+            border: 2px solid blue;
+            color: white;
+            border-radius: 20px;
+            font-size: 17px;
+            padding: 7.5px 0;
+            transition: 0.1s;
+
+        }
+        .rightcol{
+            width: 50%;
+        }
+        .leftcol{
+            margin-left: 300px;
+        }
+        .card{
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-image: url("pic-1.png");
+            background-position: center;
+            background-size: cover;
+            transition: 0.5s;
+        }
+        .card1{
+            background-image: url("https://w0.peakpx.com/wallpaper/984/345/HD-wallpaper-cowboy-among-superb-desert-monuments-r-monument-desert-r-horse-cowboy.jpg");
+        }
+        .card1:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgb(248, 9, 9);
+            transition: 1s;
+        }
+        .card2{
+            background-image: url("https://www.travelwithjan.com/galleries/parent_gallery/DSC08294.JPG");
+        }
+        .card2:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 0 35px rgb(0, 0, 255);
+            transition: 1s;
+        }
+        .card3{
+            background-image: url("https://static.toiimg.com/photo/msid-98427791,width-96,height-65.cms");
+        }
+        .card3:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px yellow;
+            transition: 1s;
+        }
+        .card4{
+            background-image: url("https://external-preview.redd.it/LWAnUOFPZhdkZRc-Pl_CPP1vj4LwR0uOPliundqh9X0.jpg?auto=webp&s=c14878a2949d2151ce2c65f6ddde444b5b6527e0");
+        }
+        .card4:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgb(0, 255, 0);
+            transition: 1s;
+        }
+        h5{
+            color: white;
+            font-size: 18px;
+            text-shadow: 0 0 5px #FF5733 ;
+        }
+        .card p{
+            text-shadow: 0 0 15px #000;
+            font-size: 8px;
+        }
+        #cb{ width: 100px;
+            color: black;
+            text-shadow: 0 0 2px rgb(0, 64, 255);
+            font-size: 13px;
+            font-weight: bold;
+            background-color: white;
+            border: 0;
+            padding: 5px;
+            border-radius: 5px;
+            outline: none;
+            margin-bottom: 10px;
+            transition: 0.7s;
+        }
+
+        #cb:hover{
+            background: transparent;
+            border: 2px solid yellow;
+            
+            border-radius: 20px;
+            font-size: 13px;
+            text-shadow: 0 0 5px red;
+            transition: 0.5s;
+        }
+    </style>
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="https://image.similarpng.com/very-thumbnail/2021/09/Camel-logo-design-template-on-transparent-background-PNG.png" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">REGION</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="menubar" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h1>Sahara</h1>
+                <p>The Sahara, vast and unyielding, stretches like an 
+                ocean of sand beneath the scorching sun. Its golden 
+                dunes whisper tales of ancient caravans and timeless 
+                nomads. In its arid embrace, life persists in unexpected
+                 oases, defying the harshness of its barren expanse.</p>
+                <button type="button" class="explore">EXPLORE</button>
+            </div>
+            <div class="col leftcol">
+                <div class="card card1">
+                    <h5>Western Desert</h5>
+                    <p>The Western Desert, a realm of stark beauty and 
+                    unforgiving terrain, captivates with its rugged 
+                    majesty under the endless desert sky. Its sands 
+                    hold secrets of ancient civilizations and echo the 
+                    footsteps of intrepid explorers.</p>
+                    <button type="button" id="cb">Know More</button>
+                </div>
+                <div class="card card2">
+                    <h5>EI Bagawat</h5>
+                    <p>The Bagawat Necropolis, nestled in Egypt's 
+                    Western Desert, is an ancient burial site adorned 
+                    with strikingly preserved painted tombs, a testament 
+                    to the enduring legacy of Egypt's past. Its walls 
+                    whisper stories of life and death.</p>
+                    <button type="button" id="cb">Know More</button>
+                </div>
+                <div class="card card3">
+                    <h5>Pyramid Of Giza</h5>
+                    <p>The Pyramid of Giza, a marvel of ancient 
+                    engineering, stands as an enduring symbol of 
+                    Egypt's rich history and ingenuity, defying the 
+                    passage of millennia with its timeless grandeur. 
+                    Its colossal stature and precise construction 
+                    continue to awe and inspire visitors from around 
+                    the world.!</p>
+                    <button type="button" id="cb">Know More</button>
+                </div>
+                <div class="card card4">
+                    <h5>Kalahari Desert</h5>
+                    <p>The Kalahari Desert, vast and enigmatic, 
+                    sprawls across southern Africa with its sweeping 
+                    dunes and sparse vegetation, harboring a wealth of 
+                    unique flora and fauna adapted to its harsh 
+                    conditions. Its haunting beauty and timeless 
+                    solitude beckon adventurers to explore its remote 
+                    and desolate landscapes.</p>
+                    <button type="button" id="cb">Know More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+</body>
+</html>
